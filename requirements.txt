@@ -1,0 +1,18 @@
+# Core API
+fastapi>=0.111.0
+uvicorn[standard]>=0.29.0
+python-multipart>=0.0.9       # required for File/Form uploads in FastAPI
+pydantic>=2.0.0
+
+# HuggingFace / ML
+torch>=2.2.0                  # install GPU version separately if needed (see README)
+transformers>=4.44.0
+accelerate>=0.30.0            # required for device_map="auto"
+bitsandbytes>=0.43.0          # 4-bit quantisation for GPU (optional, ignored on CPU)
+safetensors>=0.4.3            # faster/safer model weight loading
+sentencepiece>=0.2.0          # tokenizer dependency for Gemma
+huggingface_hub>=0.23.0       # model downloading utilities
+protobuf>=4.25.0              # tokenizer proto files
+
+# Optional but recommended
+einops>=0.7.0                 # some attention implementations
